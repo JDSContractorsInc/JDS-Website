@@ -1,22 +1,86 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact | JDS Contractors Inc.</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-</head><body>
-<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top"><div class="container"><a class="navbar-brand" href="index.html">JDS Contractors Inc.</a></div></nav>
-<main class="container py-5">
-  <h1 class="h3 fw-bold mb-3">Request a Bid</h1>
-  <form action="https://formsubmit.co/info@JDSContractorsInc.com" method="POST" class="row g-3">
-    <input type="hidden" name="_subject" value="New bid request from JDS website">
-    <div class="col-md-6"><label class="form-label">Name<input class="form-control" name="name" required></label></div>
-    <div class="col-md-6"><label class="form-label">Email<input class="form-control" type="email" name="email" required></label></div>
-    <div class="col-12"><label class="form-label">Scope<textarea class="form-control" name="scope" rows="4" required></textarea></label></div>
-    <div class="col-12"><button class="btn btn-brand" type="submit">Send Request</button></div>
-  </form>
-</main>
-<footer class="mt-5 py-4 footer"><div class="container small">© 2025 JDS Contractors Inc.</div></footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.js"></script>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | JDS Contractors Inc.</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { --jds-red:#b32025; --jds-blue:#003366; --jds-gray:#f8f9fa; }
+    body { font-family: Arial, sans-serif; }
+    .navbar { background-color: var(--jds-blue); }
+    .navbar .nav-link, .navbar-brand { color: white !important; }
+    .hero-mini { background: var(--jds-gray); padding:50px 20px; text-align:center; }
+    .btn-jds { background-color: var(--jds-red); color:#fff; border-radius:25px; font-weight:bold; }
+    footer { background-color: var(--jds-blue); color:#fff; text-align:center; padding:20px 0; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/jds-logo.png" alt="JDS Contractors Inc. Logo" height="50" class="me-2"> JDS Contractors Inc.
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-mini">
+    <h1 class="fw-bold">Request a Bid</h1>
+    <p>Send your scope — we’ll respond quickly with details.</p>
+  </section>
+
+  <main class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <!-- Simple email form using FormSubmit -->
+        <form action="https://formsubmit.co/info@JDSContractorsInc.com" method="POST" class="row g-3">
+          <input type="hidden" name="_subject" value="New bid request from JDS website">
+          <div class="col-md-6">
+            <label class="form-label">Name
+              <input class="form-control" name="name" required>
+            </label>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email
+              <input class="form-control" type="email" name="email" required>
+            </label>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Scope / Details
+              <textarea class="form-control" rows="5" name="scope" placeholder="Decks, remodeling, framing, additions, roofing, siding, trim, painting, custom home, etc." required></textarea>
+            </label>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-jds" type="submit">Send Request</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-5">
+        <div class="p-3 border rounded bg-white">
+          <h2 class="h5">Contact</h2>
+          <p class="mb-1"><strong>Email:</strong> info@JDSContractorsInc.com</p>
+          <p class="mb-1"><strong>Phone:</strong> (301) 830-2870</p>
+          <p class="mb-0"><strong>License:</strong> MHIC #113205</p>
+          <hr>
+          <img src="assets/images/20200612_143204095_iOS.jpg" class="img-fluid rounded shadow-sm border" alt="Recent JDS project">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 JDS Contractors Inc. | MHIC #113205 | (301) 830-2870 | info@JDSContractorsInc.com</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
