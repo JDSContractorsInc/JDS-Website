@@ -4,19 +4,67 @@
   <meta charset="utf-8">
   <title>JDS Contractors Inc. — Residential Construction in the DMV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Framing, additions, decks, roofing, siding, trim, painting, and custom homes. MHIC #113205.">
+  <meta name="description" content="DMV residential construction: framing, additions, decks, roofing, siding, trim, painting, and custom homes. MHIC #113205.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/images/jds-logo.png">
+
+  <!-- Canonical + OG/Twitter -->
+  <link rel="canonical" href="https://www.jdscontractorsinc.com/">
+  <meta property="og:title" content="JDS Contractors Inc. — Residential Construction in the DMV">
+  <meta property="og:description" content="Framing, additions, decks, roofing, siding, trim, painting, and custom homes. MHIC #113205.">
+  <meta property="og:url" content="https://www.jdscontractorsinc.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.jdscontractorsinc.com/assets/images/hero1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- LocalBusiness schema (Laurel-based team, no office; areas + hours) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"JDS Contractors Inc.",
+    "url":"https://www.jdscontractorsinc.com/",
+    "email":"info@JDSContractorsInc.com",
+    "telephone":"+1-301-830-2870",
+    "image":"https://www.jdscontractorsinc.com/assets/images/jds-logo.png",
+    "areaServed":[
+      "Anne Arundel County MD","Montgomery County MD","Prince George's County MD",
+      "Howard County MD","Baltimore County MD","Baltimore City MD",
+      "Washington DC","Northern Virginia",
+      "Delaware (nearby major cities)","Pennsylvania (MD-adjacent cities)","West Virginia (MD-adjacent cities)"
+    ],
+    "address":{"@type":"PostalAddress","addressLocality":"Laurel","addressRegion":"MD","postalCode":"20724","addressCountry":"US"},
+    "openingHoursSpecification":[{
+      "@type":"OpeningHoursSpecification",
+      "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens":"08:00","closes":"17:00"
+    }],
+    "priceRange":"$$",
+    "license":"MHIC-113205"
+  }
+  </script>
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-row">
-      <a class="brand" href="index.html"><img src="assets/images/jds-logo.png" alt="JDS" class="brand-logo"><span>JDS Contractors Inc.</span></a>
+      <a class="brand" href="index.html">
+        <img src="assets/images/jds-logo.png" alt="JDS" class="brand-logo">
+        <span>JDS Contractors Inc.</span>
+      </a>
       <button class="menu-toggle" aria-label="Open menu"></button>
       <nav class="nav">
         <a href="projects.html">Projects</a>
         <a href="services.html">Services</a>
+        <a href="process.html">Process</a>
+        <div class="dropdown">
+          <button type="button">Resources ▾</button>
+          <div class="dropdown-panel">
+            <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQs</a>
+          </div>
+        </div>
+        <a href="recognition.html">Recognition</a>
         <a href="about.html">About</a>
         <a href="careers.html">Careers</a>
         <a class="btn btn-primary" href="contact.html">Request a Bid</a>
@@ -40,7 +88,6 @@
           <a class="btn btn-primary" href="contact.html">Request a Bid</a>
           <a class="btn btn-ghost" href="projects.html">View Projects</a>
         </div>
-        <!-- Big crest logo inside hero -->
         <div class="hero-crest" data-animate>
           <img src="assets/images/jds-logo.png" alt="JDS Contractors Inc.">
         </div>
@@ -59,38 +106,24 @@
     <div class="container" data-animate>
       <h2 class="section-title">Core Capabilities</h2>
       <div class="grid cards-3">
-        <article class="card"><div class="card-body"><h3>Rough Framing</h3><p>Floors, walls, roofs, engineered members, trusses/rafters — precise layouts and clean inspections.</p></div></article>
-        <article class="card"><div class="card-body"><h3>Remodeling & Additions</h3><p>Second-story and rear additions, whole-home remodels, weather-tight tie-ins, schedule discipline.</p></div></article>
-        <article class="card"><div class="card-body"><h3>Custom Homes</h3><p>Start-to-finish delivery or scoped trades with fixed-price bids and transparent reporting.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Rough Framing</h3><p>Floors, walls, roofs, engineered members—precise layouts and clean inspections.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Remodeling & Additions</h3><p>Second-story and rear additions, whole-home remodels, weather-tight tie-ins.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Custom Homes</h3><p>Start-to-finish delivery or scoped trades with fixed-price bids and clear reporting.</p></div></article>
       </div>
     </div>
   </section>
 
-  <!-- Featured Projects -->
+  <!-- Service Areas -->
   <section class="section alt">
-    <div class="container">
-      <div class="section-head" style="display:flex;justify-content:space-between;align-items:end" data-animate>
-        <h2 class="section-title">Featured Projects</h2>
-        <a class="link" href="projects.html">See all →</a>
-      </div>
-      <div class="grid gallery-3" data-animate>
-        <img src="assets/images/jds_project_01.jpg" alt="Project 1" class="lightbox">
-        <img src="assets/images/jds_project_02.jpg" alt="Project 2" class="lightbox">
-        <img src="assets/images/jds_project_03.jpg" alt="Project 3" class="lightbox">
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section">
     <div class="container" data-animate>
-      <h2 class="section-title">Our Process</h2>
-      <div class="grid steps-4">
-        <div class="step"><span>1</span><h3>Scope</h3><p>Clarify drawings, constraints, and milestones.</p></div>
-        <div class="step"><span>2</span><h3>Bid</h3><p>Transparent pricing with alternates and lead-time notes.</p></div>
-        <div class="step"><span>3</span><h3>Build</h3><p>Clean sites, documented inspections, predictable progress.</p></div>
-        <div class="step"><span>4</span><h3>Closeout</h3><p>Punch-list, warranty packet, and photo archive.</p></div>
-      </div>
+      <h2 class="section-title">Service Areas</h2>
+      <p>Based in Laurel, MD (20724). We work throughout:</p>
+      <ul class="bullets">
+        <li>MD: Anne Arundel, Montgomery, Prince George’s, Howard, Baltimore County & City</li>
+        <li>DC: All neighborhoods</li>
+        <li>VA: Northern Virginia</li>
+        <li>DE/PA/WV: Nearby major cities adjacent to Maryland (contact us for availability)</li>
+      </ul>
     </div>
   </section>
 
@@ -107,7 +140,7 @@
     <div class="container footer-grid">
       <div>
         <img src="assets/images/jds-logo.png" alt="JDS" class="brand-logo sm">
-        <p>info@JDSContractorsInc.com<br>(301) 830-2870<br>MHIC - 113205</p>
+        <p>info@JDSContractorsInc.com<br>(301) 830-2870<br>MHIC - 113205<br>Mon–Sat, 8am–5pm (EST)</p>
       </div>
       <nav>
         <h4>Company</h4>
@@ -117,10 +150,11 @@
         <a href="services.html">Services</a>
       </nav>
       <nav>
-        <h4>Legal</h4>
-        <a href="#">License & Insurance</a>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
+        <h4>Resources</h4>
+        <a href="process.html">Our Process</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQs</a>
+        <a href="recognition.html">Recognition</a>
       </nav>
     </div>
     <div class="container copyright">© 2025 JDS Contractors Inc.</div>
