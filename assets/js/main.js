@@ -1,8 +1,16 @@
-// Mobile nav toggle
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile nav
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
   if (toggle && nav) toggle.addEventListener('click', () => nav.classList.toggle('open'));
+
+  // Dropdowns
+  document.querySelectorAll('.dropdown > button').forEach(btn => {
+    btn.addEventListener('click', () => btn.parentElement.classList.toggle('open'));
+  });
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.dropdown.open').forEach(d => { if (!d.contains(e.target)) d.classList.remove('open'); });
+  });
 
   // Hero slider
   const slides = document.querySelectorAll('.slide');
@@ -15,11 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (lb){
     document.querySelectorAll('.lightbox').forEach(img=>{
       img.addEventListener('click', ()=>{
-        lb.classList.add('active');
-        lb.innerHTML = '';
-        const big = document.createElement('img');
-        big.src = img.src;
-        lb.appendChild(big);
+        lb.classList.add('active'); lb.innerHTML = '';
+        const big = document.createElement('img'); big.src = img.src; lb.appendChild(big);
       });
     });
     lb.addEventListener('click', e=>{ if(e.target===lb) lb.classList.remove('active'); });
