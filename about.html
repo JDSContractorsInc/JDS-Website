@@ -1,67 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | JDS Contractors Inc.</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    :root { --jds-red:#b32025; --jds-blue:#003366; --jds-gray:#f8f9fa; }
-    body { font-family: Arial, sans-serif; }
-    .navbar { background-color: var(--jds-blue); }
-    .navbar .nav-link, .navbar-brand { color: white !important; }
-    .hero-mini { background: url('assets/images/hero.jpg') center/cover no-repeat; color:#fff; padding:70px 20px; text-align:center; }
-    footer { background-color: var(--jds-blue); color:#fff; text-align:center; padding:20px 0; }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg">
+
+  <nav class="navbar">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/images/jds-logo.png" alt="JDS Contractors Inc. Logo" height="50" class="me-2"> JDS Contractors Inc.
+      <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;">
+        <img src="assets/images/jds-logo.png" alt="JDS logo" height="44"><strong>JDS Contractors Inc.</strong>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+      <div class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </div>
     </div>
   </nav>
 
-  <section class="hero-mini">
-    <h1 class="fw-bold">About JDS</h1>
-    <p>Family-owned. Faith-built. DMV proud.</p>
-  </section>
+  <header class="hero-mini">
+    <div class="container">
+      <h1>About JDS</h1>
+      <p>Family-owned. Faith-built. DMV proud.</p>
+    </div>
+  </header>
 
-  <main class="container py-5">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-6">
-        <h2 class="h4">Who We Are</h2>
-        <p>JDS Contractors Inc. is a minority family-owned residential contractor serving Maryland, Virginia, Washington DC, Delaware, and West Virginia. We partner with general contractors and homeowners to deliver new construction, additions, and remodeling.</p>
-        <p>We specialize in rough framing, exterior enclosure (siding, trim, roofing, windows, decks), and interiors. Our crews bring discipline, safety, and craftsmanship to every project.</p>
-        <ul class="mb-3">
-          <li>500+ new homes framed</li>
-          <li>250+ additions completed</li>
-          <li>100+ decks built</li>
-          <li>MHIC License #113205</li>
-        </ul>
-        <p class="mb-0"><strong>Mission:</strong> Build with craftsmanship, transparency, and respect.<br>
-        <strong>Vision:</strong> Be the DMV’s most trusted residential construction partner.</p>
-      </div>
-      <div class="col-lg-6">
-        <img src="assets/images/20181026_120626129_iOS.jpg" class="img-fluid rounded shadow-sm border" alt="JDS team at work">
+  <main>
+    <div class="container" style="padding:32px 16px;">
+      <div style="display:grid;grid-template-columns:1fr;gap:18px;max-width:1100px;margin:0 auto;">
+        <div>
+          <h2 class="h4">Who We Are</h2>
+          <p>JDS Contractors Inc. is a minority family-owned residential contractor serving Maryland, Virginia, Washington, DC, Delaware, and West Virginia. We partner with general contractors and homeowners to deliver new construction, additions, and remodeling.</p>
+          <p>We specialize in rough framing, exterior enclosure (siding, trim, roofing, windows, decks), and interiors. Our crews bring discipline, safety, and craftsmanship to every project.</p>
+          <ul>
+            <li>500+ new homes framed</li>
+            <li>250+ additions completed</li>
+            <li>100+ decks built</li>
+            <li>MHIC License #113205</li>
+          </ul>
+          <p><strong>Mission:</strong> Build with craftsmanship, transparency, and respect.<br>
+          <strong>Vision:</strong> Be the DMV's most trusted residential construction partner.</p>
+        </div>
+        <img src="assets/images/jds_project_02.jpg" alt="JDS team at work" class="img">
       </div>
     </div>
   </main>
 
   <footer>
-    <p>© 2025 JDS Contractors Inc. | MHIC #113205 | (301) 830-2870 | info@JDSContractorsInc.com</p>
+    <p>© 2025 JDS Contractors Inc. • MHIC #113205 • <a href="mailto:info@JDSContractorsInc.com">info@JDSContractorsInc.com</a> • <a href="tel:+13018302870">(301) 830-2870</a></p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
