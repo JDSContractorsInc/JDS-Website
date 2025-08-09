@@ -1,59 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | JDS Contractors Inc.</title>
+  <meta charset="utf-8">
+  <title>About — JDS Contractors Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;">
-        <img src="assets/images/jds-logo.png" alt="JDS logo" height="44"><strong>JDS Contractors Inc.</strong>
-      </a>
-      <div class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html"><img src="assets/images/jds-logo.png" class="brand-logo" alt="JDS"> <span>JDS Contractors Inc.</span></a>
+      <button class="menu-toggle" aria-label="Open menu"></button>
+      <nav class="nav">
+        <a href="projects.html">Projects</a><a href="services.html">Services</a><a class="active" href="about.html">About</a><a href="careers.html">Careers</a><a class="btn btn-primary" href="contact.html">Request a Bid</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <header class="hero-mini">
+  <section class="hero-mini">
     <div class="container">
       <h1>About JDS</h1>
       <p>Family-owned. Faith-built. DMV proud.</p>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <div class="container" style="padding:32px 16px;">
-      <div style="display:grid;grid-template-columns:1fr;gap:18px;max-width:1100px;margin:0 auto;">
-        <div>
-          <h2 class="h4">Who We Are</h2>
-          <p>JDS Contractors Inc. is a minority family-owned residential contractor serving Maryland, Virginia, Washington, DC, Delaware, and West Virginia. We partner with general contractors and homeowners to deliver new construction, additions, and remodeling.</p>
-          <p>We specialize in rough framing, exterior enclosure (siding, trim, roofing, windows, decks), and interiors. Our crews bring discipline, safety, and craftsmanship to every project.</p>
-          <ul>
-            <li>500+ new homes framed</li>
-            <li>250+ additions completed</li>
-            <li>100+ decks built</li>
-            <li>MHIC License #113205</li>
-          </ul>
-          <p><strong>Mission:</strong> Build with craftsmanship, transparency, and respect.<br>
-          <strong>Vision:</strong> Be the DMV's most trusted residential construction partner.</p>
-        </div>
-        <img src="assets/images/jds_project_02.jpg" alt="JDS team at work" class="img">
+  <main class="section">
+    <div class="container grid two">
+      <div>
+        <h2>Who We Are</h2>
+        <p>JDS Contractors Inc. is a minority family-owned residential contractor serving Maryland, Virginia, Washington DC, Delaware, and West Virginia. We partner with general contractors and homeowners to deliver new construction, additions, and remodeling.</p>
+        <p>We specialize in rough framing, exterior enclosure (siding, trim, roofing, windows, decks), and interiors. Our crews bring discipline, safety, and craftsmanship to every project.</p>
+        <ul class="bullets">
+          <li>500+ new homes framed</li>
+          <li>250+ additions completed</li>
+          <li>100+ decks built</li>
+          <li>MHIC License #113205</li>
+        </ul>
+        <p><strong>Mission:</strong> Build with craftsmanship, transparency, and respect. <br><strong>Vision:</strong> Be the DMV’s most trusted residential construction partner.</p>
+      </div>
+      <div>
+        <img src="assets/images/jds_project_02.jpg" alt="Team at work" class="elevated">
       </div>
     </div>
   </main>
 
-  <footer>
-    <p>© 2025 JDS Contractors Inc. • MHIC #113205 • <a href="mailto:info@JDSContractorsInc.com">info@JDSContractorsInc.com</a> • <a href="tel:+13018302870">(301) 830-2870</a></p>
-  </footer>
-
+  <footer class="site-footer"><div class="container copyright">© 2025 JDS Contractors Inc.</div></footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
