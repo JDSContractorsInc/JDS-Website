@@ -1,14 +1,14 @@
-/* JDS Contractors Inc. — Competitive Theme v3 */
+/* JDS Contractors Inc. — Competitive Theme v3 + Bigger Logo + Hero Crest */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 :root{
-  --navy:#0E2238;      /* header/footer */
-  --blue:#0D7A9B;      /* accents */
-  --orange:#F26C2B;    /* CTA */
-  --bg:#F7F8FB;        /* page bg */
-  --panel:#fff;        /* cards/panels */
-  --line:#e5e7eb;      /* borders */
-  --text:#1F2937;      /* body text */
+  --navy:#0E2238;
+  --blue:#0D7A9B;
+  --orange:#F26C2B;
+  --bg:#F7F8FB;
+  --panel:#fff;
+  --line:#e5e7eb;
+  --text:#1F2937;
 }
 
 *{box-sizing:border-box}
@@ -21,7 +21,7 @@ body{
 /* Layout helpers */
 .container{max-width:1200px;margin:0 auto;padding:0 16px}
 .section{padding:64px 0;background:var(--panel)}
-.section.alt{background:linear-gradient(180deg,#fff, #f9fafc)}
+.section.alt{background:linear-gradient(180deg,#fff,#f9fafc)}
 .section-title{font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0 0 18px}
 
 .grid{display:grid;gap:18px}
@@ -46,10 +46,15 @@ a{color:var(--blue);text-decoration:none}
 
 /* Header/Nav */
 .site-header{background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:50}
-.header-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:66px}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:84px} /* taller for bigger logo */
 .brand{display:flex;align-items:center;gap:.6rem;color:#fff}
-.brand-logo{height:40px;width:auto;display:block}
-.brand-logo.sm{height:28px}
+.brand-logo{
+  height:64px;       /* bigger header logo */
+  max-height:64px;
+  width:auto;
+  display:block;
+}
+.brand-logo.sm{height:40px} /* bigger footer logo */
 .nav{display:flex;align-items:center;gap:18px}
 .nav a{color:#fff;opacity:.95}
 .nav a:hover,.nav a.active{opacity:1}
@@ -57,9 +62,15 @@ a{color:var(--blue);text-decoration:none}
 .menu-toggle:before,.menu-toggle:after{content:"";position:absolute;left:10px;right:10px;height:2px;background:#fff}
 .menu-toggle:before{top:12px}.menu-toggle:after{bottom:12px}
 @media (max-width:900px){
+  .brand-logo{height:52px;max-height:52px}
+  .header-row{min-height:72px}
   .menu-toggle{display:block}
-  .nav{position:absolute;left:0;right:0;top:66px;background:var(--navy);flex-direction:column;padding:12px;display:none}
+  .nav{position:absolute;left:0;right:0;top:72px;background:var(--navy);flex-direction:column;padding:12px;display:none}
   .nav.open{display:flex}
+}
+@media (max-width:575px){
+  .brand-logo{height:42px;max-height:42px}
+  .header-row{min-height:64px}
 }
 
 /* Hero — Carousel */
@@ -67,13 +78,22 @@ a{color:var(--blue);text-decoration:none}
 .slider{position:relative;height:72vh;min-height:420px;overflow:hidden}
 .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .6s ease}
 .slide.active{opacity:1}
-.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg, rgba(14,34,56,.82), rgba(13,122,155,.5))}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(14,34,56,.82),rgba(13,122,155,.5))}
 .hero-inner{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:0 16px}
 .hero h1{font-weight:800;font-size:clamp(2rem,4.8vw,3.3rem);margin:.3rem 0 .5rem}
 .hero .lead{opacity:.96;max-width:900px;margin:0 auto}
 .hero-cta{margin-top:16px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .facts{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0;margin:0}
 .facts li{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:8px 12px;border-radius:999px}
+
+/* Hero crest (big logo in hero) */
+.hero-crest{margin:18px auto 0;display:grid;place-items:center}
+.hero-crest img{
+  height:120px; width:auto;
+  filter:drop-shadow(0 6px 20px rgba(0,0,0,.25));
+}
+@media (min-width:1100px){ .hero-crest img{height:150px} }
+@media (max-width:575px){ .hero-crest img{height:96px} }
 
 /* Cards, panels, steps */
 .card{border:1px solid var(--line);border-radius:14px;background:#fff;transition:transform .15s ease, box-shadow .2s ease;overflow:hidden}
@@ -111,8 +131,8 @@ a{color:var(--blue);text-decoration:none}
 
 /* Forms */
 label{display:block;margin:8px 0 4px;font-weight:600}
-input, textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff}
-input:focus, textarea:focus{outline:2px solid rgba(13,122,155,.25);border-color:#cfe7f0}
+input,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff}
+input:focus,textarea:focus{outline:2px solid rgba(13,122,155,.25);border-color:#cfe7f0}
 
 /* Scroll reveal */
 [data-animate]{opacity:0;transform:translateY(16px);transition:opacity .5s ease, transform .5s ease}
