@@ -1,67 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | JDS Contractors Inc.</title>
+  <meta charset="utf-8">
+  <title>Contact — JDS Contractors Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="navbar-brand" style="display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;">
-        <img src="assets/images/jds-logo.png" alt="JDS logo" height="44"><strong>JDS Contractors Inc.</strong>
-      </a>
-      <div class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html"><img src="assets/images/jds-logo.png" class="brand-logo" alt="JDS"> <span>JDS Contractors Inc.</span></a>
+      <button class="menu-toggle" aria-label="Open menu"></button>
+      <nav class="nav">
+        <a href="projects.html">Projects</a><a href="services.html">Services</a><a href="about.html">About</a><a href="careers.html">Careers</a><a class="btn btn-primary" href="contact.html">Request a Bid</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <header class="hero-mini">
+  <section class="hero-mini">
     <div class="container">
       <h1>Request a Bid</h1>
       <p>Send your scope — we’ll respond quickly with details.</p>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <div class="container" style="padding:32px 16px;max-width:1100px;">
-      <div style="display:grid;grid-template-columns:1.3fr .7fr;gap:18px;">
-        <form action="https://formsubmit.co/info@JDSContractorsInc.com" method="POST" style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;">
-          <input type="hidden" name="_subject" value="New bid request from JDS website">
-          <label class="form-label">Name
-            <input class="form-control" name="name" required style="width:100%;padding:10px;margin:6px 0;border:1px solid #e5e7eb;border-radius:8px;">
-          </label>
-          <label class="form-label">Email
-            <input class="form-control" type="email" name="email" required style="width:100%;padding:10px;margin:6px 0;border:1px solid #e5e7eb;border-radius:8px;">
-          </label>
-          <label class="form-label">Scope / Details
-            <textarea class="form-control" rows="6" name="scope" placeholder="Decks, remodeling, framing, additions, roofing, siding, trim, painting, custom home, etc." required style="width:100%;padding:10px;margin:6px 0;border:1px solid #e5e7eb;border-radius:8px;"></textarea>
-          </label>
-          <div><button class="btn-jds" type="submit">Send Request</button></div>
-        </form>
-
-        <aside style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;">
-          <h2 class="h5">Contact</h2>
-          <p class="mb-1"><strong>Email:</strong> <a href="mailto:info@JDSContractorsInc.com">info@JDSContractorsInc.com</a></p>
-          <p class="mb-1"><strong>Phone:</strong> <a href="tel:+13018302870">(301) 830-2870</a></p>
-          <p class="mb-0"><strong>License:</strong> MHIC #113205</p>
-          <hr>
-          <img src="assets/images/jds_project_03.jpg" alt="Recent JDS project" class="img">
-        </aside>
-      </div>
+  <main class="section">
+    <div class="container grid two">
+      <form action="https://formsubmit.co/info@JDSContractorsInc.com" method="POST" class="panel">
+        <input type="hidden" name="_subject" value="New bid request from JDS website">
+        <label>Name<input name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Phone<input name="phone"></label>
+        <label>City/State<input name="location"></label>
+        <label>Scope<textarea name="scope" rows="6" placeholder="Decks, remodeling, framing, additions, roofing, siding, trim, painting, custom home, etc." required></textarea></label>
+        <button class="btn btn-primary" type="submit">Send Request</button>
+      </form>
+      <aside class="panel">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> info@JDSContractorsInc.com</p>
+        <p><strong>Phone:</strong> (301) 830-2870</p>
+        <p><strong>License:</strong> MHIC - 113205</p>
+        <hr>
+        <img src="assets/images/jds_project_03.jpg" alt="Recent JDS project" class="elevated">
+      </aside>
     </div>
   </main>
 
-  <footer>
-    <p>© 2025 JDS Contractors Inc. • MHIC #113205 • <a href="mailto:info@JDSContractorsInc.com">info@JDSContractorsInc.com</a> • <a href="tel:+13018302870">(301) 830-2870</a></p>
-  </footer>
-
+  <footer class="site-footer"><div class="container copyright">© 2025 JDS Contractors Inc.</div></footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
