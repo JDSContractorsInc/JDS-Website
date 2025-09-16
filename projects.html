@@ -5,52 +5,139 @@
   <title>Projects — JDS Contractors Inc.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Project gallery featuring JDS framing, additions, decks, and custom home builds.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Saira+Semi+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/jds-logo.png">
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-row">
-      <a class="brand" href="index.html"><img src="assets/images/jds-logo.png" class="brand-logo" alt="JDS"><span>JDS Contractors Inc.</span></a>
+      <a class="brand" href="index.html">
+        <img src="assets/images/jds-logo.png" class="brand-logo" alt="JDS">
+        <span>JDS Contractors Inc.</span>
+      </a>
       <button class="menu-toggle" aria-label="Open menu"></button>
-      <nav class="nav">
+      <nav class="nav" id="primary-nav">
         <a class="active" href="projects.html">Projects</a>
         <a href="services.html">Services</a>
         <a href="process.html">Process</a>
-        <div class="dropdown"><button type="button">Resources ▾</button><div class="dropdown-panel"><a href="blog.html">Blog</a><a href="faq.html">FAQs</a></div></div>
+        <div class="dropdown">
+          <button type="button" aria-haspopup="menu" aria-expanded="false">Resources ▾</button>
+          <div class="dropdown-panel" role="menu">
+            <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQs</a>
+          </div>
+        </div>
         <a href="recognition.html">Recognition</a>
         <a href="about.html">About</a>
         <a href="careers.html">Careers</a>
-        <a class="btn btn-primary" href="contact.html">Request a Bid</a>
+        <a class="btn btn-primary"
+           href="https://app.jdscontractorsinc.com/quote?utm_source=main-site&utm_medium=projects&utm_campaign=quote">
+          Request a Quote
+        </a>
       </nav>
     </div>
   </header>
 
-  <section class="hero-mini">
-    <div class="container">
-      <h1>Project Gallery</h1>
-      <p>Click any image to view in lightbox.</p>
+  <!-- Mini hero -->
+  <section class="hero bg-ios" style="min-height: 280px;">
+    <div class="hero-inner glass" style="padding:24px; align-items:end;">
+      <div class="container" data-animate>
+        <p class="eyebrow">Our Work</p>
+        <h1 style="margin:6px 0 0">Project Gallery</h1>
+        <p class="lead" style="margin-top:6px">Click any image to view in lightbox.</p>
+      </div>
     </div>
   </section>
 
-  <main class="section">
+  <main class="section white">
     <div class="container">
-      <div class="grid gallery-3">
-        <img src="assets/images/jds_project_01.jpg" alt="Project 1" class="lightbox">
-        <img src="assets/images/jds_project_02.jpg" alt="Project 2" class="lightbox">
-        <img src="assets/images/jds_project_03.jpg" alt="Project 3" class="lightbox">
-        <img src="assets/images/jds_project_04.jpg" alt="Project 4" class="lightbox">
-        <img src="assets/images/jds_project_05.jpg" alt="Project 5" class="lightbox">
-        <img src="assets/images/jds_project_06.jpg" alt="Project 6" class="lightbox">
-        <img src="assets/images/jds_project_07.jpg" alt="Project 7" class="lightbox">
-        <img src="assets/images/jds_project_08.jpg" alt="Project 8" class="lightbox">
-        <img src="assets/images/jds_project_09.jpg" alt="Project 9" class="lightbox">
+      <!-- Filters -->
+      <div class="panel elevated" style="margin-bottom:16px;">
+        <div role="tablist" aria-label="Filter projects" class="logo-row" style="justify-content:flex-start; gap:10px;">
+          <button role="tab" aria-selected="true" data-filter="all" class="btn btn-ghost" style="border-color:#e5e7eb;color:#0E1420">All</button>
+          <button role="tab" aria-selected="false" data-filter="kitchen" class="btn btn-ghost" style="border-color:#e5e7eb;color:#0E1420">Kitchens</button>
+          <button role="tab" aria-selected="false" data-filter="bath" class="btn btn-ghost" style="border-color:#e5e7eb;color:#0E1420">Baths</button>
+          <button role="tab" aria-selected="false" data-filter="addition" class="btn btn-ghost" style="border-color:#e5e7eb;color:#0E1420">Additions</button>
+          <button role="tab" aria-selected="false" data-filter="deck" class="btn btn-ghost" style="border-color:#e5e7eb;color:#0E1420">Decks</button>
+          <button role="tab" aria-selected="false" data-filter="framing" class="btn btn-ghost" style="border-color:#e5e7eb;color:#0E1420">Framing</button>
+          <button role="tab" aria-selected="false" data-filter="exterior" class="btn btn-ghost" style="border-color:#e5e7eb;color:#0E1420">Exteriors</button>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div class="grid gallery-3 gallery" id="projectGrid">
+        <figure class="tile" data-tags="framing exterior">
+          <img src="assets/images/jds_project_01.jpg" alt="Framing and exterior progress" class="lightbox" loading="lazy">
+          <figcaption class="meta">Framing • Exterior</figcaption>
+        </figure>
+        <figure class="tile" data-tags="addition">
+          <img src="assets/images/jds_project_02.jpg" alt="Two-story rear addition" class="lightbox" loading="lazy">
+          <figcaption class="meta">Rear Addition</figcaption>
+        </figure>
+        <figure class="tile" data-tags="deck exterior">
+          <img src="assets/images/jds_project_03.jpg" alt="Composite deck with railings" class="lightbox" loading="lazy">
+          <figcaption class="meta">Deck</figcaption>
+        </figure>
+        <figure class="tile" data-tags="kitchen">
+          <img src="assets/images/jds_project_04.jpg" alt="Kitchen renovation with island" class="lightbox" loading="lazy">
+          <figcaption class="meta">Kitchen</figcaption>
+        </figure>
+        <figure class="tile" data-tags="bath">
+          <img src="assets/images/jds_project_05.jpg" alt="Bathroom remodel with tiled shower" class="lightbox" loading="lazy">
+          <figcaption class="meta">Bathroom</figcaption>
+        </figure>
+        <figure class="tile" data-tags="framing">
+          <img src="assets/images/jds_project_06.jpg" alt="Interior framing stage" class="lightbox" loading="lazy">
+          <figcaption class="meta">Framing</figcaption>
+        </figure>
+        <figure class="tile" data-tags="exterior">
+          <img src="assets/images/jds_project_07.jpg" alt="New siding and trim" class="lightbox" loading="lazy">
+          <figcaption class="meta">Exterior</figcaption>
+        </figure>
+        <figure class="tile" data-tags="addition">
+          <img src="assets/images/jds_project_08.jpg" alt="Second-story addition structure" class="lightbox" loading="lazy">
+          <figcaption class="meta">Second-Story Addition</figcaption>
+        </figure>
+        <figure class="tile" data-tags="custom-home framing">
+          <img src="assets/images/jds_project_09.jpg" alt="Custom home framing" class="lightbox" loading="lazy">
+          <figcaption class="meta">Custom Home</figcaption>
+        </figure>
       </div>
     </div>
   </main>
 
-  <footer class="site-footer"><div class="container copyright">© 2025 JDS Contractors Inc.</div></footer>
-  <div id="lightbox"></div>
+  <footer class="site-footer">
+    <div class="container copyright">© 2025 JDS Contractors Inc.</div>
+  </footer>
+
+  <div id="lightbox" aria-hidden="true"></div>
+
   <script src="assets/js/main.js"></script>
+  <script>
+    // Simple filter behavior using data-tags
+    (function(){
+      const tabs = document.querySelectorAll('[role="tablist"] [role="tab"]');
+      const grid = document.getElementById('projectGrid');
+      if(!tabs.length || !grid) return;
+
+      tabs.forEach(tab=>{
+        tab.addEventListener('click', ()=>{
+          tabs.forEach(t=>{ t.setAttribute('aria-selected','false'); });
+          tab.setAttribute('aria-selected','true');
+          const f = tab.dataset.filter;
+          grid.querySelectorAll('.tile').forEach(tile=>{
+            const tags = tile.getAttribute('data-tags') || '';
+            tile.style.display = (f==='all' || tags.includes(f)) ? '' : 'none';
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
