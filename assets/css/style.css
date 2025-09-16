@@ -1,4 +1,28 @@
-/* JDS Contractors Inc. — Competitive Theme v4.1 (with dropdown, blog, awards) */
+:root{
+  --navy:#0B1220; --orange:#F36A21; --blue:#2E73A9;
+  --teal1:#10B3D6; --teal2:#0C89B6; --sand:#FFF3EA;
+  --gray-700:#6B7785; --gray-300:#D4DAE1; --white:#fff;
+  --bg:var(--navy); --text:#E9EDF2; --muted:#9AABB9;
+  --brand:var(--orange); --accent:var(--blue);
+  --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif}
+h1,h2,h3{font-family:"Saira Semi Condensed",Inter,system-ui,sans-serif}
+.bg-ios{
+  background:
+    radial-gradient(1200px 600px at 10% 20%, rgba(16,179,214,.55), transparent 60%),
+    radial-gradient(900px 500px at 85% 15%, rgba(243,106,33,.50), transparent 55%),
+    radial-gradient(700px 400px at 70% 75%, rgba(12,137,182,.55), transparent 60%),
+    linear-gradient(180deg, #0A1929 0%, #0B1220 100%);
+}
+.glass{background:rgba(255,255,255,.06);backdrop-filter:saturate(140%) blur(14px);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius)}
+.section.white{background:#fff;color:#0E1420}
+.section.dark{background:#0B1220;color:#E9EDF2}
+.btn.btn-primary{background:var(--brand);color:#0B1220;border-radius:12px;border:0;padding:.8rem 1.1rem;font-weight:700}
+.btn.btn-ghost{border:1px solid rgba(255,255,255,.25);color:var(--text);background:transparent}
+a.link{color:var(--blue)}
+.site-header{position:sticky;top:0;z-index:50;background:transparent;transition:background .2s,border-color .2s}
+.site-header.is-scrolled{background:rgba(11,18,32,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}/* JDS Contractors Inc. — Competitive Theme v4.1 (with dropdown, blog, awards) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 :root{
