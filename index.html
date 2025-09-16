@@ -5,8 +5,44 @@
   <title>JDS Contractors Inc. — Residential Construction in the DMV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="DMV residential construction: framing, additions, decks, roofing, siding, trim, painting, and custom homes. MHIC #113205.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Saira+Semi+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Site CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/images/jds-logo.png">
+
+  <!-- UI refresh overrides (safe to keep even after style.css is updated) -->
+  <style>
+    :root{--bg:#0B1220;--text:#E9EDF2}
+    html,body{background:var(--bg);color:var(--text)}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif}
+    h1,h2,h3{font-family:"Saira Semi Condensed",Inter,system-ui,sans-serif}
+
+    /* iOS-style gradient + glass card */
+    .bg-ios{
+      background:
+        radial-gradient(1200px 600px at 10% 20%, rgba(16,179,214,.55), transparent 60%),
+        radial-gradient(900px 500px at 85% 15%, rgba(243,106,33,.50), transparent 55%),
+        radial-gradient(700px 400px at 70% 75%, rgba(12,137,182,.55), transparent 60%),
+        linear-gradient(180deg, #0A1929 0%, #0B1220 100%);
+    }
+    .glass{background:rgba(255,255,255,.06);backdrop-filter:saturate(140%) blur(14px);border:1px solid rgba(255,255,255,.08);border-radius:14px}
+
+    /* Section themes */
+    .section.white{background:#ffffff;color:#0E1420}
+    .section.dark{background:#0B1220;color:#E9EDF2}
+
+    /* Sticky transparent header + scrolled state */
+    .site-header{position:sticky;top:0;z-index:50;background:transparent;transition:background .2s ease,border-color .2s ease}
+    .site-header.is-scrolled{background:rgba(11,18,32,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+
+    /* Buttons */
+    .btn.btn-primary{background:#F36A21;color:#0B1220;border-radius:12px;border:0;padding:.8rem 1.1rem;font-weight:700}
+    .btn.btn-ghost{border:1px solid rgba(255,255,255,.25);color:var(--text);background:transparent}
+  </style>
 
   <!-- Canonical + OG/Twitter -->
   <link rel="canonical" href="https://www.jdscontractorsinc.com/">
@@ -17,7 +53,7 @@
   <meta property="og:image" content="https://www.jdscontractorsinc.com/assets/images/hero1.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- LocalBusiness schema (Laurel-based team, no office; areas + hours) -->
+  <!-- LocalBusiness schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -46,7 +82,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="site-header">
+  <header id="site-header" class="site-header">
     <div class="container header-row">
       <a class="brand" href="index.html">
         <img src="assets/images/jds-logo.png" alt="JDS" class="brand-logo">
@@ -67,8 +103,6 @@
         <a href="recognition.html">Recognition</a>
         <a href="about.html">About</a>
         <a href="careers.html">Careers</a>
-
-        <!-- PRIMARY NAV CTA → points to the app -->
         <a class="btn btn-primary"
            href="https://app.jdscontractorsinc.com/quote?utm_source=main-site&utm_medium=nav&utm_campaign=quote">
           Request a Quote
@@ -77,20 +111,19 @@
     </div>
   </header>
 
-  <!-- Hero Carousel -->
-  <section class="hero">
+  <!-- Hero -->
+  <section class="hero bg-ios">
     <div class="slider">
       <div class="slide" style="background-image:url('assets/images/hero1.jpg')"></div>
       <div class="slide" style="background-image:url('assets/images/hero2.jpg')"></div>
       <div class="slide" style="background-image:url('assets/images/hero3.jpg')"></div>
     </div>
-    <div class="hero-inner">
+    <div class="hero-inner glass">
       <div data-animate>
         <p class="eyebrow">DMV • Residential Construction</p>
         <h1>Build on Solid Faith.</h1>
         <p class="lead">Framing • Additions • Decks • Roofing • Siding • Trim • Painting • Custom Homes</p>
         <div class="hero-cta">
-          <!-- HERO CTA → points to the app -->
           <a class="btn btn-primary"
              href="https://app.jdscontractorsinc.com/quote?utm_source=main-site&utm_medium=hero&utm_campaign=quote">
             Request a Quote
@@ -111,7 +144,7 @@
   </section>
 
   <!-- Core Capabilities -->
-  <section class="section">
+  <section class="section white">
     <div class="container" data-animate>
       <h2 class="section-title">Core Capabilities</h2>
       <div class="grid cards-3">
@@ -123,7 +156,7 @@
   </section>
 
   <!-- Service Areas -->
-  <section class="section alt">
+  <section class="section dark">
     <div class="container" data-animate>
       <h2 class="section-title">Service Areas</h2>
       <p>Based in Laurel, MD (20724). We work throughout:</p>
@@ -140,7 +173,6 @@
   <section class="cta">
     <div class="container cta-inner">
       <h2>Have drawings or a scope?</h2>
-      <!-- MID-PAGE CTA → points to the app -->
       <a class="btn btn-primary"
          href="https://app.jdscontractorsinc.com/quote?utm_source=main-site&utm_medium=mid-cta&utm_campaign=quote">
         Request a Quote
@@ -174,6 +206,17 @@
   </footer>
 
   <div id="lightbox"></div>
+
+  <!-- Scripts -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Minimal header scroll behavior (works even if main.js is unchanged)
+    (function(){
+      const header = document.querySelector('.site-header');
+      if(!header) return;
+      const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 10);
+      onScroll(); addEventListener('scroll', onScroll, {passive:true});
+    })();
+  </script>
 </body>
 </html>
