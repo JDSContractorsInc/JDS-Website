@@ -5,43 +5,132 @@
   <title>FAQs — JDS Contractors Inc.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Answers to common questions about timelines, bids, inspections, service areas, and warranty.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Saira+Semi+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/jds-logo.png">
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-row">
-      <a class="brand" href="index.html"><img src="assets/images/jds-logo.png" class="brand-logo" alt="JDS"><span>JDS Contractors Inc.</span></a>
+      <a class="brand" href="index.html">
+        <img src="assets/images/jds-logo.png" class="brand-logo" alt="JDS">
+        <span>JDS Contractors Inc.</span>
+      </a>
       <button class="menu-toggle" aria-label="Open menu"></button>
-      <nav class="nav">
-        <a href="projects.html">Projects</a><a href="services.html">Services</a><a href="process.html">Process</a>
-        <div class="dropdown"><button type="button">Resources ▾</button><div class="dropdown-panel"><a href="blog.html">Blog</a><a class="active" href="faq.html">FAQs</a></div></div>
-        <a href="recognition.html">Recognition</a><a href="about.html">About</a><a href="careers.html">Careers</a><a class="btn btn-primary" href="contact.html">Request a Bid</a>
+      <nav class="nav" id="primary-nav">
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="process.html">Process</a>
+        <div class="dropdown">
+          <button type="button" aria-haspopup="menu" aria-expanded="true">Resources ▾</button>
+          <div class="dropdown-panel" role="menu">
+            <a href="blog.html">Blog</a>
+            <a class="active" href="faq.html">FAQs</a>
+          </div>
+        </div>
+        <a href="recognition.html">Recognition</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a class="btn btn-primary"
+           href="https://app.jdscontractorsinc.com/quote?utm_source=main-site&utm_medium=faq&utm_campaign=quote">
+          Request a Quote
+        </a>
       </nav>
     </div>
   </header>
 
-  <section class="hero-mini"><div class="container"><h1>Frequently Asked Questions</h1><p>If you don’t see your question, just ask—Mon–Sat, 8am–5pm (EST).</p></div></section>
-
-  <main class="section">
-    <div class="container grid two" data-animate>
-      <div class="panel">
-        <h2>Project & Bidding</h2>
-        <p><strong>How fast can you provide a bid?</strong><br>Typically 3–7 business days depending on scope and drawings.</p>
-        <p><strong>Do you do site visits?</strong><br>Yes—recommended for remodels and additions before final pricing.</p>
-        <p><strong>What areas do you serve?</strong><br>All of DC; MD counties (Anne Arundel, Montgomery, Prince George’s, Howard, Baltimore County/City); Northern VA; select nearby DE/PA/WV cities.</p>
+  <!-- Hero -->
+  <section class="hero bg-ios" style="min-height: 260px;">
+    <div class="hero-inner glass" style="padding:24px; align-items:end;">
+      <div class="container" data-animate>
+        <p class="eyebrow">Need clarity?</p>
+        <h1 style="margin:6px 0 0">Frequently Asked Questions</h1>
+        <p class="lead" style="margin-top:6px">If you don’t see your question, just ask—Mon–Sat, 8am–5pm (EST).</p>
       </div>
-      <div class="panel">
-        <h2>Schedule & Quality</h2>
-        <p><strong>How do you handle inspections?</strong><br>We schedule and meet inspectors; our target is first-pass approvals.</p>
-        <p><strong>Do you warranty your work?</strong><br>Yes—warranty details are provided at closeout.</p>
-        <p><strong>Do you work with GCs and homeowners?</strong><br>Yes—we partner with both, depending on project delivery.</p>
+    </div>
+  </section>
+
+  <!-- FAQs accordion -->
+  <main class="section white">
+    <div class="container" data-animate>
+      <div class="accordion" id="faq-accordion">
+        <div class="accordion-item">
+          <button class="accordion-toggle" aria-expanded="false">How fast can you provide a bid?</button>
+          <div class="accordion-panel"><p>Typically 3–7 business days depending on scope and drawings.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-toggle" aria-expanded="false">Do you do site visits?</button>
+          <div class="accordion-panel"><p>Yes—recommended for remodels and additions before final pricing.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-toggle" aria-expanded="false">What areas do you serve?</button>
+          <div class="accordion-panel"><p>All of DC; MD counties (Anne Arundel, Montgomery, Prince George’s, Howard, Baltimore County/City); Northern VA; select nearby DE/PA/WV cities.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-toggle" aria-expanded="false">How do you handle inspections?</button>
+          <div class="accordion-panel"><p>We schedule and meet inspectors; our target is first-pass approvals.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-toggle" aria-expanded="false">Do you warranty your work?</button>
+          <div class="accordion-panel"><p>Yes—warranty details are provided at closeout.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-toggle" aria-expanded="false">Do you work with GCs and homeowners?</button>
+          <div class="accordion-panel"><p>Yes—we partner with both, depending on project delivery.</p></div>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer class="site-footer"><div class="container copyright">© 2025 JDS Contractors Inc.</div></footer>
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2>Still have questions?</h2>
+      <a class="btn btn-primary"
+         href="https://app.jdscontractorsinc.com/quote?utm_source=main-site&utm_medium=faq&utm_campaign=quote">
+        Request a Quote
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container copyright">© 2025 JDS Contractors Inc.</div>
+  </footer>
+
   <script src="assets/js/main.js"></script>
+  <script>
+    // Simple accordion behavior
+    (function(){
+      const toggles = document.querySelectorAll('.accordion-toggle');
+      toggles.forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          btn.nextElementSibling.style.maxHeight = expanded ? null : btn.nextElementSibling.scrollHeight + "px";
+        });
+        // initialize panels collapsed
+        btn.nextElementSibling.style.maxHeight = null;
+      });
+    })();
+  </script>
+  <style>
+    .accordion-item{border-bottom:1px solid #e5e7eb;padding:10px 0}
+    .accordion-toggle{
+      background:none;border:0;outline:none;
+      font-size:1rem;font-weight:600;width:100%;
+      text-align:left;padding:10px;cursor:pointer;
+      color:#0E1420;display:flex;justify-content:space-between;align-items:center;
+    }
+    .accordion-toggle[aria-expanded="true"]{color:var(--brand);}
+    .accordion-panel{
+      overflow:hidden;transition:max-height .3s ease;padding:0 10px;
+    }
+    .accordion-panel p{margin:10px 0;color:#1f2937}
+  </style>
 </body>
 </html>
-
