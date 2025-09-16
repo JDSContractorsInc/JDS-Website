@@ -5,35 +5,58 @@
   <title>Services — JDS Contractors Inc.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Decks, remodeling, rough framing, additions, roofing, siding, trim, painting, custom homes, complete house remodeling.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Saira+Semi+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/jds-logo.png">
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-row">
-      <a class="brand" href="index.html"><img src="assets/images/jds-logo.png" class="brand-logo" alt="JDS"><span>JDS Contractors Inc.</span></a>
+      <a class="brand" href="index.html">
+        <img src="assets/images/jds-logo.png" class="brand-logo" alt="JDS">
+        <span>JDS Contractors Inc.</span>
+      </a>
       <button class="menu-toggle" aria-label="Open menu"></button>
-      <nav class="nav">
+      <nav class="nav" id="primary-nav">
         <a href="projects.html">Projects</a>
         <a class="active" href="services.html">Services</a>
         <a href="process.html">Process</a>
-        <div class="dropdown"><button type="button">Resources ▾</button><div class="dropdown-panel"><a href="blog.html">Blog</a><a href="faq.html">FAQs</a></div></div>
+        <div class="dropdown">
+          <button type="button" aria-haspopup="menu" aria-expanded="false">Resources ▾</button>
+          <div class="dropdown-panel" role="menu">
+            <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQs</a>
+          </div>
+        </div>
         <a href="recognition.html">Recognition</a>
         <a href="about.html">About</a>
         <a href="careers.html">Careers</a>
-        <a class="btn btn-primary" href="contact.html">Request a Bid</a>
+        <a class="btn btn-primary"
+           href="https://app.jdscontractorsinc.com/quote?utm_source=main-site&utm_medium=services&utm_campaign=quote">
+          Request a Quote
+        </a>
       </nav>
     </div>
   </header>
 
-  <section class="hero-mini">
-    <div class="container">
-      <h1>Services</h1>
-      <p>From rough framing to turnkey custom homes.</p>
+  <!-- Hero -->
+  <section class="hero bg-ios" style="min-height: 280px;">
+    <div class="hero-inner glass" style="padding:24px; align-items:end;">
+      <div class="container" data-animate>
+        <p class="eyebrow">What We Do</p>
+        <h1 style="margin:6px 0 0">Services</h1>
+        <p class="lead" style="margin-top:6px">From rough framing to turnkey custom homes.</p>
+      </div>
     </div>
   </section>
 
-  <main class="section">
+  <!-- Services grid -->
+  <main class="section white">
     <div class="container" data-animate>
       <div class="grid cards-4">
         <article class="card"><div class="card-body"><h3>Decks</h3><p>Composite & wood decks with proper flashing, guards, and finishes.</p></div></article>
@@ -50,14 +73,21 @@
     </div>
   </main>
 
+  <!-- CTA band -->
   <section class="cta">
     <div class="container cta-inner">
       <h2>Ready to scope your project?</h2>
-      <a class="btn btn-primary" href="contact.html">Request a Bid</a>
+      <a class="btn btn-primary"
+         href="https://app.jdscontractorsinc.com/quote?utm_source=main-site&utm_medium=services&utm_campaign=quote">
+        Request a Quote
+      </a>
     </div>
   </section>
 
-  <footer class="site-footer"><div class="container copyright">© 2025 JDS Contractors Inc.</div></footer>
+  <footer class="site-footer">
+    <div class="container copyright">© 2025 JDS Contractors Inc.</div>
+  </footer>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>
