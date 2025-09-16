@@ -1,13 +1,58 @@
+/* JDS Contractors Inc. — UI Refresh v1 */
+/* ---------- TOKENS ---------- */
 :root{
+  /* Brand palette */
   --navy:#0B1220; --orange:#F36A21; --blue:#2E73A9;
   --teal1:#10B3D6; --teal2:#0C89B6; --sand:#FFF3EA;
-  --gray-700:#6B7785; --gray-300:#D4DAE1; --white:#fff;
-  --bg:var(--navy); --text:#E9EDF2; --muted:#9AABB9;
-  --brand:var(--orange); --accent:var(--blue);
-  --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.35);
+  --gray-700:#6B7785; --gray-300:#D4DAE1; --white:#FFFFFF;
+
+  /* Theme */
+  --bg:var(--navy);
+  --text:#E9EDF2;
+  --muted:#9AABB9;
+
+  /* UI */
+  --radius:14px;
+  --line:#e5e7eb;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+
+  /* Buttons */
+  --brand:var(--orange);
+  --accent:var(--blue);
 }
-body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif}
+
+/* ---------- BASE ---------- */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  line-height:1.6;
+}
 h1,h2,h3{font-family:"Saira Semi Condensed",Inter,system-ui,sans-serif}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ---------- LAYOUT ---------- */
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+.section{padding:64px 0}
+.section.white{background:#fff;color:#0E1420}
+.section.dark{background:#0B1220;color:#E9EDF2}
+.section.alt{background:linear-gradient(180deg,#0A1929 0%, #0B1220 100%)} /* legacy support */
+
+.section-title{font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0 0 18px}
+
+.grid{display:grid;gap:18px}
+.cards-3{grid-template-columns:repeat(3,1fr)}
+.cards-4{grid-template-columns:repeat(4,1fr)}
+.gallery-3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.cards-3,.cards-4,.gallery-3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.cards-3,.cards-4,.gallery-3{grid-template-columns:1fr}}
+
+/* ---------- UTILITIES ---------- */
 .bg-ios{
   background:
     radial-gradient(1200px 600px at 10% 20%, rgba(16,179,214,.55), transparent 60%),
@@ -15,140 +60,160 @@ h1,h2,h3{font-family:"Saira Semi Condensed",Inter,system-ui,sans-serif}
     radial-gradient(700px 400px at 70% 75%, rgba(12,137,182,.55), transparent 60%),
     linear-gradient(180deg, #0A1929 0%, #0B1220 100%);
 }
-.glass{background:rgba(255,255,255,.06);backdrop-filter:saturate(140%) blur(14px);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius)}
-.section.white{background:#fff;color:#0E1420}
-.section.dark{background:#0B1220;color:#E9EDF2}
-.btn.btn-primary{background:var(--brand);color:#0B1220;border-radius:12px;border:0;padding:.8rem 1.1rem;font-weight:700}
-.btn.btn-ghost{border:1px solid rgba(255,255,255,.25);color:var(--text);background:transparent}
-a.link{color:var(--blue)}
-.site-header{position:sticky;top:0;z-index:50;background:transparent;transition:background .2s,border-color .2s}
-.site-header.is-scrolled{background:rgba(11,18,32,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}/* JDS Contractors Inc. — Competitive Theme v4.1 (with dropdown, blog, awards) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
-:root{
-  --navy:#0E2238; --blue:#0D7A9B; --orange:#F26C2B;
-  --bg:#F7F8FB; --panel:#fff; --line:#e5e7eb; --text:#1F2937;
+.glass{
+  background:rgba(255,255,255,.06);
+  backdrop-filter:saturate(140%) blur(14px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-block;border-radius:12px;padding:.8rem 1.1rem;font-weight:700;border:0}
+.btn-primary{background:var(--brand);color:#0B1220}
+.btn-primary:hover{filter:brightness(.97)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.25);color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
 
-/* Layout */
-.container{max-width:1200px;margin:0 auto;padding:0 16px}
-.section{padding:64px 0;background:var(--panel)}
-.section.alt{background:linear-gradient(180deg,#fff,#f9fafc)}
-.section-title{font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0 0 18px}
-.grid{display:grid;gap:18px}
-.grid.two{grid-template-columns:1.2fr .8fr}
-@media (max-width:900px){.grid.two{grid-template-columns:1fr}}
-.cards-3{grid-template-columns:repeat(3,1fr)}
-.cards-4{grid-template-columns:repeat(4,1fr)}
-.gallery-3{grid-template-columns:repeat(3,1fr)}
-@media (max-width:900px){.cards-3,.cards-4,.gallery-3{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:600px){.cards-3,.cards-4,.gallery-3{grid-template-columns:1fr}}
-a{color:var(--blue);text-decoration:none}
-.link{font-weight:600}.link:hover{text-decoration:underline}
-
-/* Buttons */
-.btn{display:inline-block;border-radius:999px;padding:.75rem 1.25rem;font-weight:700}
-.btn-primary{background:var(--orange);color:#fff}.btn-primary:hover{filter:brightness(.95)}
-.btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.85);color:#fff}
-.btn-ghost:hover{background:rgba(255,255,255,.1)}
-
-/* Header/Nav (dropdown) */
-.site-header{background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:50}
+/* ---------- HEADER / NAV ---------- */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:transparent;
+  transition:background .2s ease,border-color .2s ease;
+}
+.site-header.is-scrolled{
+  background:rgba(11,18,32,.85);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
 .header-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:84px}
 .brand{display:flex;align-items:center;gap:.6rem;color:#fff}
-.brand-logo{height:64px;max-height:64px;width:auto;display:block}
+.brand-logo{height:64px;max-height:64px;width:auto}
 .brand-logo.sm{height:40px}
+
 .nav{display:flex;align-items:center;gap:18px;position:relative}
-.nav a{color:#fff;opacity:.95}.nav a:hover,.nav a.active{opacity:1}
+.nav a{color:#fff;opacity:.95}
+.nav a:hover,.nav a.active{opacity:1}
 .menu-toggle{display:none;height:36px;width:42px;background:transparent;border:0;position:relative}
 .menu-toggle:before,.menu-toggle:after{content:"";position:absolute;left:10px;right:10px;height:2px;background:#fff}
 .menu-toggle:before{top:12px}.menu-toggle:after{bottom:12px}
+
 .nav .dropdown{position:relative}
 .nav .dropdown>button{background:transparent;border:0;color:#fff;font-weight:600;cursor:pointer}
-.dropdown-panel{position:absolute;top:calc(100% + 8px);right:0;min-width:220px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:10px;box-shadow:0 20px 36px rgba(0,0,0,.15);display:none}
+.dropdown-panel{
+  position:absolute;top:calc(100% + 8px);right:0;min-width:220px;
+  background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:10px;
+  box-shadow:0 20px 36px rgba(0,0,0,.15);display:none
+}
 .dropdown-panel a{display:block;color:#1f2937;padding:8px 10px;border-radius:8px}
 .dropdown-panel a:hover{background:#f6f7fb}
 .dropdown.open .dropdown-panel{display:block}
+
 @media (max-width:900px){
   .brand-logo{height:52px;max-height:52px}
   .header-row{min-height:72px}
   .menu-toggle{display:block}
-  .nav{position:absolute;left:0;right:0;top:72px;background:var(--navy);flex-direction:column;padding:12px;display:none}
+  .nav{
+    position:absolute; left:0; right:0; top:72px;
+    background:rgba(11,18,32,.98); backdrop-filter:blur(8px);
+    flex-direction:column; padding:12px; display:none
+  }
   .nav.open{display:flex}
+  .nav a{width:100%}
   .dropdown-panel{position:relative;top:0;right:auto;box-shadow:none;border:0;padding:0;background:transparent}
   .dropdown-panel a{color:#fff;padding:8px 0}
 }
 
-/* Hero / Slider */
+/* ---------- HERO / SLIDER ---------- */
 .hero{position:relative;color:#fff}
 .slider{position:relative;height:72vh;min-height:420px;overflow:hidden}
 .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .6s ease}
 .slide.active{opacity:1}
-.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(14,34,56,.82),rgba(13,122,155,.5))}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(14,34,56,.72),rgba(13,122,155,.45))}
+
 .hero-inner{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:0 16px}
 .hero h1{font-weight:800;font-size:clamp(2rem,4.8vw,3.3rem);margin:.3rem 0 .5rem}
 .hero .lead{opacity:.96;max-width:900px;margin:0 auto}
 .hero-cta{margin-top:16px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.facts{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0;margin:0}
+
+.facts{
+  position:absolute;bottom:16px;left:50%;transform:translateX(-50%);
+  display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0;margin:0
+}
 .facts li{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:8px 12px;border-radius:999px}
 
-/* Hero crest */
+/* Crest */
 .hero-crest{margin:18px auto 0;display:grid;place-items:center}
 .hero-crest img{height:120px;width:auto;filter:drop-shadow(0 6px 20px rgba(0,0,0,.25))}
 @media (min-width:1100px){.hero-crest img{height:150px}}
 @media (max-width:575px){.hero-crest img{height:96px}}
 
-/* Cards / panels / steps */
-.card{border:1px solid var(--line);border-radius:14px;background:#fff;transition:transform .15s ease,box-shadow .2s ease;overflow:hidden}
+/* ---------- CARDS / PANELS / STEPS ---------- */
+.card{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:#fff; color:#0E1420;
+  transition:transform .15s ease,box-shadow .2s ease; overflow:hidden
+}
 .card:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,0,0,.07)}
 .card .card-body{padding:16px}
-.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px}
 .elevated{border-radius:12px;border:1px solid #eceff3;box-shadow:0 1px 6px rgba(0,0,0,.06)}
-.steps-4{grid-template-columns:repeat(4,1fr)}
-.steps-4 .step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center}
-.steps-4 .step span{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font-weight:700;margin-bottom:8px}
+
+.steps-4{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+.steps-4 .step{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;text-align:center;color:#0E1420
+}
+.steps-4 .step span{
+  display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;
+  background:var(--brand);color:#fff;font-weight:700;margin-bottom:8px
+}
 @media (max-width:900px){.steps-4{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:600px){.steps-4{grid-template-columns:1fr}}
 
-/* Gallery / Lightbox */
-.gallery-3 img,.gallery img{width:100%;height:auto;border-radius:12px;border:1px solid #eceff3;box-shadow:0 1px 6px rgba(0,0,0,.07);cursor:zoom-in}
+/* ---------- GALLERY / LIGHTBOX ---------- */
+.gallery-3 img,.gallery img{
+  width:100%;height:auto;border-radius:12px;border:1px solid #eceff3;
+  box-shadow:0 1px 6px rgba(0,0,0,.07);cursor:zoom-in
+}
 
-/* Blog cards */
+/* ---------- BLOG ---------- */
 .blog-grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
 @media (max-width:900px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:600px){.blog-grid{grid-template-columns:1fr}}
-.post-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
-.post-card img{width:100%;height:auto;display:block}
+.post-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;color:#0E1420}
+.post-card img{width:100%;height:auto}
 .post-card .meta{padding:14px}
 .post-card h3{margin:.2rem 0 .4rem;font-size:1.05rem}
 
-/* Logos / awards */
+/* ---------- LOGOS / AWARDS ---------- */
 .logo-row{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:center;opacity:.9}
 .logo-row img{height:36px;width:auto}
 .awards{display:grid;gap:16px;grid-template-columns:repeat(4,1fr)}
 @media (max-width:900px){.awards{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:600px){.awards{grid-template-columns:1fr}}
-.award{border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;background:#fff}
+.award{border:1px solid var(--line);border-radius:var(--radius);padding:14px;text-align:center;background:#fff;color:#0E1420}
 
-/* CTA + footer */
+/* ---------- CTA + FOOTER ---------- */
 .cta{background:linear-gradient(90deg,var(--navy),var(--blue));color:#fff}
 .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 0}
 .cta h2{margin:0;font-size:clamp(1.25rem,2.6vw,1.6rem)}
+
 .site-footer{background:var(--navy);color:#d1d5db;margin-top:16px}
 .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px;padding:24px 0}
 .footer-grid h4{color:#fff;margin:.25rem 0}
-.footer-grid a{color:#d1d5db}.footer-grid a:hover{color:#fff}
+.footer-grid a{color:#d1d5db}
+.footer-grid a:hover{color:#fff}
 .copyright{border-top:1px solid rgba(255,255,255,.1);padding:12px 0;text-align:center}
 
-/* Forms */
+/* ---------- FORMS ---------- */
 label{display:block;margin:8px 0 4px;font-weight:600}
-input,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff}
-input:focus,textarea:focus{outline:2px solid rgba(13,122,155,.25);border-color:#cfe7f0}
+input,textarea,select{
+  width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff;color:#0E1420
+}
+input:focus,textarea:focus,select:focus{outline:2px solid rgba(13,122,155,.25);border-color:#cfe7f0}
 
-/* Scroll reveal */
+/* ---------- SCROLL REVEAL ---------- */
 [data-animate]{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
 [data-animate].in{opacity:1;transform:none}
