@@ -33,12 +33,12 @@
       position:fixed;
       top:0; left:0; right:0;
       z-index:1000;
-      height:120px;
+      height:110px;
       background:var(--navy);
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding:0 3rem;
+      padding:0 2rem;
       box-shadow:0 2px 12px rgba(0,0,0,0.18);
     }
     .nav-logo {
@@ -46,14 +46,15 @@
       align-items:center;
       flex-shrink:0;
       text-decoration:none;
-      gap:.75rem;
+      gap:.6rem;
+      margin-left:0;
     }
     .nav-logo img {
-      height:200px;
-      width:200px;
+      height:100px;
+      width:auto;
       display:block;
       object-fit:contain;
-      object-position:center;
+      object-position:left center;
     }
     .nav-logo-text {
       display:flex;
@@ -112,7 +113,7 @@
 
     /* ── HERO ── */
     .hero {
-      margin-top:120px;
+      margin-top:110px;
       height:calc(100vh - 80px);
       min-height:560px;
       position:relative;
@@ -378,7 +379,7 @@
     /* ── FOOTER ── */
     footer { background:var(--off-white); border-top:1px solid var(--border); padding:5rem 4rem 3rem; display:grid; grid-template-columns:2fr 1fr 1fr 1.2fr; gap:3rem; }
     .ft-brand { display:flex; flex-direction:column; gap:1.2rem; }
-    .ft-brand img { height:200px; width:200px; object-fit:contain; object-position:left center; }
+    .ft-brand img { height:100px; width:auto; object-fit:contain; object-position:left center; }
     .ft-brand p { font-size:.84rem; color:var(--text-muted); line-height:1.8; max-width:260px; }
     .ft-lic { display:inline-block; font-size:.64rem; letter-spacing:.14em; text-transform:uppercase; color:var(--orange); border:1.5px solid var(--orange); padding:.25rem .7rem; width:fit-content; }
     .ft-col h4 { font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.1rem; font-weight:600; }
@@ -388,10 +389,10 @@
 
     /* ── RESPONSIVE ── */
     @media(max-width:960px) {
-      nav { padding:0 1.2rem; height:100px; }
-      .nav-logo img { height:140px; width:140px; }
+      nav { padding:0 1rem; height:80px; }
+      .nav-logo img { height:70px; width:auto; }
       .nav-links { display:none; }
-      .hero { margin-top:70px; height:auto; min-height:520px; }
+      .hero { margin-top:80px; height:auto; min-height:520px; }
       .hero-body { grid-template-columns:1fr; padding:0 1.5rem 3.5rem; gap:1.5rem; }
       .hero-headline h1 { font-size:clamp(2.6rem,10vw,4.5rem); }
       .hero-right { max-width:100%; }
@@ -446,7 +447,7 @@
   </div>
   <div class="hero-body">
     <div class="hero-headline">
-      <h1>Built on<br><em>Solid Faith,</em><br>Crafted to Last.</h1>
+      <h1>Built on<br><em>Solid Faith.</em></h1>
     </div>
     <div class="hero-right">
       <p>JDS Contractors Inc. delivers premium residential construction across Maryland, DC, and Virginia. From custom framing to full home builds — quality you can see, craftsmanship you can trust.</p>
@@ -704,17 +705,21 @@
   <div class="contact-card">
     <h3>Ready to Start?</h3>
     <p>Reach out today for a free on-site consultation and estimate. No obligation — just an honest conversation about your project.</p>
-    <a class="crow" href="tel:3015550100">
+    <a class="crow" href="tel:3018302870">
       <div class="cico">📞</div>
-      (301) 555-0100
+      (301) 830-2870
     </a>
-    <a class="crow" href="/cdn-cgi/l/email-protection#5831363e3718323c2b3b37362c2a393b2c372a2b31363b763b3735">
+    <a class="crow" href="tel:3019741123">
+      <div class="cico">📞</div>
+      (301) 974-1123
+    </a>
+    <a class="crow" href="/cdn-cgi/l/email-protection#7930171f1639333d2a3a16170d0b181a0d160b0a10171a571a1614">
       <div class="cico">✉️</div>
-      <span class="__cf_email__" data-cfemail="60090e060f200a0413030f0e14120103140f1213090e034e030f0d">[email&#160;protected]</span>
+      <span class="__cf_email__" data-cfemail="50193e363f101a1403133f3e24223133243f2223393e337e333f3d">[email&#160;protected]</span>
     </a>
     <a class="crow" href="#">
       <div class="cico">📍</div>
-      Laurel, MD — Serving the DMV
+      Maryland City, Laurel MD 20724
     </a>
     <a class="btn-orange" href="contact.html" style="margin-top:1.5rem;display:block;text-align:center">Request Free Estimate</a>
   </div>
@@ -761,9 +766,10 @@
   </div>
   <div class="ft-col">
     <h4>Contact</h4>
-    <a href="tel:3015550100">(301) 555-0100</a>
-    <a href="/cdn-cgi/l/email-protection#40292e262f002a2433232f2e34322123342f3233292e236e232f2d"><span class="__cf_email__" data-cfemail="8ae3e4ece5cae0eef9e9e5e4fef8ebe9fee5f8f9e3e4e9a4e9e5e7">[email&#160;protected]</span></a>
-    <a href="#">Laurel, MD 20707</a>
+    <a href="tel:3018302870">(301) 830-2870</a>
+    <a href="tel:3019741123">(301) 974-1123</a>
+    <a href="mailto:Info@JDSContractorsinc.com">Info@JDSContractorsinc.com</a>
+    <a href="#">Maryland City, Laurel MD 20724</a>
     <a href="#">MD · DC · VA</a>
   </div>
 </footer>
@@ -772,5 +778,23 @@
   <span>Build on Solid Faith</span>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   let cur = 0;
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots   = document.querySelectorAll('.hdot');
+
+  function goSlide(n) {
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur = n;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+  }
+
+  // Auto-advance every 5 seconds
+  setInterval(function() {
+    goSlide((cur + 1) % slides.length);
+  }, 5000);
+</script>
+</body>
+</html>
